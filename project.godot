@@ -1,0 +1,67 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "CirclePrimitive",
+"language": "GDScript",
+"path": "res://addons/sprite_primitives/circle.gd"
+}, {
+"base": "Node2D",
+"class": "LinePrimitive",
+"language": "GDScript",
+"path": "res://addons/sprite_primitives/line.gd"
+}, {
+"base": "Node2D",
+"class": "MultiLinePrimitive",
+"language": "GDScript",
+"path": "res://addons/sprite_primitives/multi_line.gd"
+}, {
+"base": "Node2D",
+"class": "PolygonPrimitive",
+"language": "GDScript",
+"path": "res://addons/sprite_primitives/polygon.gd"
+}, {
+"base": "Node2D",
+"class": "RectanglePrimitive",
+"language": "GDScript",
+"path": "res://addons/sprite_primitives/rectangle.gd"
+}, {
+"base": "Node2D",
+"class": "TrianglePrimitive",
+"language": "GDScript",
+"path": "res://addons/sprite_primitives/triangle.gd"
+} ]
+_global_script_class_icons={
+"CirclePrimitive": "res://addons/sprite_primitives/Circle.png",
+"LinePrimitive": "res://addons/sprite_primitives/Line.png",
+"MultiLinePrimitive": "res://addons/sprite_primitives/MultiLine.png",
+"PolygonPrimitive": "res://addons/sprite_primitives/Polygon.png",
+"RectanglePrimitive": "res://addons/sprite_primitives/Rectangle.png",
+"TrianglePrimitive": "res://addons/sprite_primitives/Triangle.png"
+}
+
+[application]
+
+config/name="Sprite Primitives"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/godot-git-control.funabab/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/sprite_primitives/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
